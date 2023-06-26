@@ -13,23 +13,28 @@ struct BadgesList: View {
     @EnvironmentObject var entityFetcher: EntityFetcher
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 30) {
+        VStack(alignment: .leading) {
 
             Text("Badges Relacionadas")
-                .font(.body)
+                .font(.callout)
                 .foregroundColor(.black)
+                .padding(.leading, 120)
+                .padding(.bottom, -33)
 
             ScrollView(
                 .horizontal,
                 showsIndicators: false
             ) {
-                badges().padding(80)
-            }.padding(-80)
+                badges()
+                    .padding(80)
+            }
+            .padding(.leading, 90)
         }
         .padding()
         .background(
             Color(.white).opacity(0.5)
         )
+        .frame(width: 1920)
     }
 
     private func badges() -> some View {

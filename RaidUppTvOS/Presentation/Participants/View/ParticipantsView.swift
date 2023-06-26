@@ -17,10 +17,12 @@ struct ParticipantsView: View {
     
     @State private var selectedIndex: Int = 0
     @State private var isFocused: Bool = false
-    
     @FocusState var selected: Int?
     
     var body: some View {
+        Text("Participants")
+            .font(.title2)
+            .foregroundColor(.black)
         HStack {
             VStack(alignment: .leading, spacing: 32) {
                 Button(action: {
@@ -29,14 +31,12 @@ struct ParticipantsView: View {
                     Text("Code")
                 }
                 .focused($selected, equals: 0)
-                
                 Button(action: {
                     self.selectedIndex = 1
                 }) {
                     Text("Design")
                 }
                 .focused($selected, equals: 1)
-                
                 Button(action: {
                     self.selectedIndex = 2
                 }) {
@@ -44,16 +44,16 @@ struct ParticipantsView: View {
                 }
                 .focused($selected, equals: 2)
             }
+            .foregroundColor(Color("gray"))
+            .focusSection()
             .frame(width: 571, height: 278)
             .font(.body)
             .buttonStyle(.plain)
             .onChange(of: selected) { newValue in
                 if let newValue {
                     selectedIndex = newValue
-                    print(selectedIndex)
                 }
             }
-            
             ScrollView {
                 LazyVGrid(
                     columns: [
@@ -73,10 +73,12 @@ struct ParticipantsView: View {
                 }
                 .padding(60)
                 .padding(.top, 192)
+                .focusSection()
             }
             .frame(width: 1170, height: 1124)
             Spacer()
         }
+        
         .background {
             Image("background")
         }

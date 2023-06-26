@@ -45,6 +45,7 @@ struct MissionDetailsView: View {
                 "bronze"
             ]).environmentObject(entityFetcher)
         }
+
         .background {
             Image("background")
         }
