@@ -39,9 +39,9 @@ struct GenericMenu<Content: View>: View {
 
     private func buildImageWithDescription() -> some View {
         VStack(alignment: .leading) {
-            Image(imageName)
+            Image(self.imageName)
                 .resizable()
-                .frame(width: 708, height: 531)
+                .frame(width: 755, height: 465)
                 .scaledToFit()
             Text(self.imageTitle)
                 .font(.headline)

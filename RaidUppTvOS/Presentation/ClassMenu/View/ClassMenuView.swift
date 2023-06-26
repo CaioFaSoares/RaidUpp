@@ -15,7 +15,7 @@ struct ClassMenuView: View {
     var body: some View {
         GenericMenu(
             title: self.title,
-            imageName: "class-image",
+            imageName: "class-png1",
             imageTitle: self.title,
             imageSubtitle: "Subtitle",
             content: {

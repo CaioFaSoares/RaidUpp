@@ -11,7 +11,7 @@ struct ParticipantsView: View {
     
     let participants: [[String]] = [
         ["participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00"],
-        ["participant-01", "participant-01", "participant-01", "participant-01", "participant-01"],
+        ["participant-01", "participant-01", "participant-01", "participant-01"],
         ["participant-02", "participant-02", "participant-02", "participant-02", "participant-02"]
     ]
     
@@ -20,11 +20,13 @@ struct ParticipantsView: View {
     @FocusState var selected: Int?
     
     var body: some View {
-        Text("Participants")
-            .font(.title2)
-            .foregroundColor(.black)
         HStack {
             VStack(alignment: .leading, spacing: 32) {
+                Spacer()
+                Text("Participants")
+                    .font(.title2)
+                Text("Categories")
+                    .font(.caption2)
                 Button(action: {
                     self.selectedIndex = 0
                 }) {
@@ -43,12 +45,13 @@ struct ParticipantsView: View {
                     Text("Management")
                 }
                 .focused($selected, equals: 2)
+                Spacer()
             }
             .foregroundColor(Color("gray"))
-            .focusSection()
-            .frame(width: 571, height: 278)
+            .frame(alignment: .leading)
             .font(.body)
             .buttonStyle(.plain)
+            .focusSection()
             .onChange(of: selected) { newValue in
                 if let newValue {
                     selectedIndex = newValue
@@ -71,19 +74,13 @@ struct ParticipantsView: View {
                         )
                     }
                 }
-                .padding(60)
-                .padding(.top, 192)
                 .focusSection()
             }
-            .frame(width: 1170, height: 1124)
-            Spacer()
+            .frame(width: 1170, height: 1000)
         }
-        
         .background {
             Image("background")
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
