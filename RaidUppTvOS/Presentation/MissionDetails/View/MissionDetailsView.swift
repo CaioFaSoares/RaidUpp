@@ -26,8 +26,10 @@ struct MissionDetailsView: View {
                 missionDescription: self.missionDescription,
                 missionLeaders: nil,
                 rating: self.rating
-            ).environmentObject(entityFetcher)
-                .focusSection()
+            )
+            .environmentObject(entityFetcher)
+            .focusSection()
+            .frame(height: UIScreen.main.nativeBounds.height/3*2)
             
             Spacer()
             BadgesList(imagesNames: [
@@ -45,7 +47,6 @@ struct MissionDetailsView: View {
                 "bronze"
             ]).environmentObject(entityFetcher)
         }
-
         .background {
             Image("background")
         }

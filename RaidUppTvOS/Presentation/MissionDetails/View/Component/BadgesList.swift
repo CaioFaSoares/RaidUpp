@@ -14,21 +14,19 @@ struct BadgesList: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-
             Text("Badges Relacionadas")
                 .font(.callout)
                 .foregroundColor(.black)
                 .padding(.leading, 120)
                 .padding(.bottom, -33)
-
+                .padding(.top, 20)
             ScrollView(
                 .horizontal,
                 showsIndicators: false
             ) {
                 badges()
-                    .padding(80)
+                    .padding(70)
             }
-            .padding(.leading, 90)
         }
         .padding()
         .background(
@@ -47,8 +45,8 @@ struct BadgesList: View {
                 }
                 .buttonStyle(.plain)
                 .frame(
-                    width: 204,
-                    height: 204
+                    width: 150,
+                    height: 150
                 )
             }
         }

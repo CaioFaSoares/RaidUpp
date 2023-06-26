@@ -41,8 +41,8 @@ struct GenericMenu<Content: View>: View {
         VStack(alignment: .leading) {
             Image(imageName)
                 .resizable()
-                .frame(width: 794, height: 530)
-                .scaledToFill()
+                .frame(width: 708, height: 531)
+                .scaledToFit()
             Text(self.imageTitle)
                 .font(.headline)
                 .foregroundColor(.black)
