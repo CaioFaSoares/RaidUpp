@@ -30,7 +30,7 @@ struct MenuView: View {
                 buildClassesList()
             }
 
-        }.background(Image("background"))
+        }.background(Image("bg-01"))
     }
 
     private func buildClassesList() -> some View {

@@ -31,10 +31,10 @@ struct FormClass: View {
                     })
                     HStack {
                         Spacer()
-                        Rectangle()
-                            .frame(width: 222, height: 242, alignment: .center)
-                            .foregroundColor(.gray)
-                            .padding(16)
+//                        Rectangle()
+//                            .frame(width: 222, height: 242, alignment: .center)
+//                            .foregroundColor(.gray)
+//                            .padding(16)
                         Spacer()
                     }
                 }

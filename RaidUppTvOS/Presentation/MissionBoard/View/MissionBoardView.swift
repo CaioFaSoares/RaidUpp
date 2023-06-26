@@ -60,7 +60,7 @@ struct MissionBoardView: View {
             }
         }
         .background {
-            Image("background")
+            Image("bg-03")
         }
     }
 }

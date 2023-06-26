@@ -69,17 +69,17 @@ struct GlobalForms: View {
 
                     HStack {
                         Spacer()
-                        Rectangle()
-                            .frame(width: 222, height: 242, alignment: .center)
-                            .foregroundColor(.gray)
-                            .padding(16)
-                            .overlay {
-                                if let data = data, let uiImage = UIImage(data: data
-                                ) {
-                                    Image(uiImage: uiImage)
-                                        .resizable()
-                                }
-                            }
+//                        Rectangle()
+//                            .frame(width: 222, height: 242, alignment: .center)
+//                            .foregroundColor(.gray)
+//                            .padding(16)
+//                            .overlay {
+//                                if let data = data, let uiImage = UIImage(data: data
+//                                ) {
+//                                    Image(uiImage: uiImage)
+//                                        .resizable()
+//                                }
+//                            }
                         Spacer()
                     }
                 }

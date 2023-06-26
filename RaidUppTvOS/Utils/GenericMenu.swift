@@ -20,11 +20,11 @@ struct GenericMenu<Content: View>: View {
     var body: some View {
         ZStack {
             VStack {
-                Rectangle()
-                    .foregroundColor(Color("gray-header"))
-                    .opacity(0.7)
-                    .frame(width: 1920, height: 380)
-                    .ignoresSafeArea()
+//                Rectangle()
+//                    .foregroundColor(Color("gray-header"))
+//                    .opacity(0.7)
+//                    .frame(width: 1920, height: 380)
+//                    .ignoresSafeArea()
                 Spacer()
             }
 
@@ -34,7 +34,7 @@ struct GenericMenu<Content: View>: View {
 
                 buildList()
             }.padding(.top, 230)
-        }.background(Image("background"))
+        }.background(Image("bg-02"))
     }
 
     private func buildImageWithDescription() -> some View {

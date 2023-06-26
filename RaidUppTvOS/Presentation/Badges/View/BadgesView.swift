@@ -25,7 +25,7 @@ struct BadgesView: View {
                 .padding(.horizontal, -80)
 
         }.background {
-            Image("background")
+            Image("bg-05")
         }
     }
 
@@ -54,9 +54,13 @@ struct BadgesView: View {
                         width: 250,
                         height: 250
                     )
+                    .padding(40)
                 }
             }
+            .frame(width: 1740)
+            .padding(40)
         }
+        .frame(width: 1740)
     }
 }
 
