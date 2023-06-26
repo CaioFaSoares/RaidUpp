@@ -10,14 +10,14 @@ import SwiftUI
 struct ParticipantsView: View {
     
     let participants: [[String]] = [
-        ["participant-00", "participant-00", "participant-00", "participant-00", "participant-00"],
+        ["participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00"],
         ["participant-01", "participant-01", "participant-01", "participant-01", "participant-01"],
         ["participant-02", "participant-02", "participant-02", "participant-02", "participant-02"]
     ]
     
     @State private var selectedIndex: Int = 0
     @State private var isFocused: Bool = false
-        
+    
     @FocusState var selected: Int?
     
     var body: some View {
@@ -62,19 +62,19 @@ struct ParticipantsView: View {
                         GridItem(.flexible()),
                         GridItem(.flexible())
                     ],
-                    spacing: 50
+                    spacing: 60
                 ) {
                     ForEach(participants[selectedIndex].indices, id: \.self) { index in
-                        Button(action: {}) {
-                            ParticipantButton(
-                                imageName: participants[selectedIndex][index],
-                                name: "daniele"
-                            )
-                        }.buttonStyle(.plain)
+                        ParticipantButton(
+                            imageName: participants[selectedIndex][index],
+                            name: "daniele"
+                        )
                     }
                 }
+                .padding(60)
+                .padding(.top, 192)
             }
-            
+            .frame(width: 1170, height: 1124)
             Spacer()
         }
         .background {

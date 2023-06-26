@@ -10,6 +10,9 @@ import SwiftUI
 struct ParticipantButton: View {
     let imageName: String
     let name: String
+    @State private var scale = CGSize(width: 1.0, height: 1.0)
+    
+    @Environment(\.isFocused) var isFocused
     
     init(imageName: String, name: String) {
         self.imageName = imageName
@@ -22,10 +25,23 @@ struct ParticipantButton: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
-            Text(self.name)
-                .foregroundColor(.black)
+            if (CGSizeEqualToSize(scale, CGSize(width: 1.2, height: 1.2))) {
+                Text(self.name)
+                    .foregroundColor(.black)
+            } else {
+                Text(self.name)
+                    .foregroundColor(.gray)
+            }
         }
         .frame(width: 250, height: 292)
+        .scaleEffect(scale)
+        .focusable(true) { isFocused in
+            if isFocused {
+                scale = CGSize(width: 1.2, height: 1.2)
+            } else {
+                scale = CGSize(width: 1.0, height: 1.0)
+            }
+        }
     }
 }
 

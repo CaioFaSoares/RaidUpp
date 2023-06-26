@@ -14,9 +14,9 @@ struct MissionDetailsView: View {
     let missionDescription: String
     let missionLeaders: [String]?
     var rating: Int
-
+    
     @EnvironmentObject var entityFetcher: EntityFetcher
-
+    
     var body: some View {
         VStack {
             MissionDetails(
@@ -27,6 +27,8 @@ struct MissionDetailsView: View {
                 missionLeaders: nil,
                 rating: self.rating
             ).environmentObject(entityFetcher)
+                .focusSection()
+            
             Spacer()
             BadgesList(imagesNames: [
                 "bronze",

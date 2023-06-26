@@ -65,6 +65,7 @@ struct MissionDetails: View {
                     }
                 }
                 .frame(width: 474, height: 114)
+                .focusSection()
             }
             Image("gold")
                 .resizable()
