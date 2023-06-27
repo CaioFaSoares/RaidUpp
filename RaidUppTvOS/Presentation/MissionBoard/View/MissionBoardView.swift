@@ -27,7 +27,7 @@ struct MissionBoardView: View {
             VStack(spacing: 50) {
                 ForEach(missionTypes, id: \.title) { missionType in
                     VStack {
-                        Text("Missões \(missionType.title)")
+                        Text("\(missionType.title.capitalized) missions")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundColor(.gray)
                         ScrollView(.horizontal) {
@@ -35,12 +35,13 @@ struct MissionBoardView: View {
                                 ForEach(0..<missionCount) { _ in
                                     NavigationLink {
                                         MissionDetailsView(
-                                            missionTitle: "teste",
-                                            startDate: "dd/mm/yyyy",
-                                            endDate: "dd/mm/yyyy",
-                                            missionDescription: "description",
+                                            missionTitle: "Mission title",
+                                            startDate: "20/05/2023",
+                                            endDate: "26/05/2023",
+                                            missionDescription: "Mission description.",
                                             missionLeaders: ["alumni", "alumni"],
-                                            rating: 3
+                                            rating: 3,
+                                            image: missionType.title
                                         ).environmentObject(entityFetcher)
                                     } label: {
                                         MissionCard(

@@ -14,6 +14,7 @@ struct MissionDetails: View {
     let missionDescription: String
     let missionLeaders: [String]?
     var rating: Int = 0
+    var image: String
     
     @FocusState private var isFocused1: Bool
     @FocusState private var isFocused2: Bool
@@ -103,7 +104,7 @@ struct MissionDetails: View {
                 .foregroundColor(Color("gray"))
             }
             Spacer()
-            Image("gold")
+            Image(self.image)
                 .resizable()
                 .frame(width: 368, height: 368)
         }
@@ -120,7 +121,8 @@ struct MissionDetails_Previews: PreviewProvider {
             endDate: "DD/MM/YYYY",
             missionDescription: "Mission description here.",
             missionLeaders: ["Name 01", "Name 02", "Name 03"],
-            rating: 4
+            rating: 4,
+            image: "gold"
         ).environmentObject(EntityFetcher())
     }
 }

@@ -14,6 +14,7 @@ struct MissionDetailsView: View {
     let missionDescription: String
     let missionLeaders: [String]?
     var rating: Int
+    let image: String
     
     @EnvironmentObject var entityFetcher: EntityFetcher
     
@@ -25,7 +26,8 @@ struct MissionDetailsView: View {
                 endDate: self.endDate,
                 missionDescription: self.missionDescription,
                 missionLeaders: nil,
-                rating: self.rating
+                rating: self.rating,
+                image: self.image
             )
             .environmentObject(entityFetcher)
             .focusSection()
@@ -61,7 +63,8 @@ struct MissionDetailsView_Previews: PreviewProvider {
             endDate: "DD/MM/YY",
             missionDescription: "Mission description here. Mission description here. Mission description here.",
             missionLeaders: ["Teste1", "Teste2"],
-            rating: 4
+            rating: 4,
+            image: "gold"
         ).environmentObject(EntityFetcher())
     }
 }

@@ -21,6 +21,8 @@
 		3546DEAF2A446DA5006BDC28 /* ClassMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546DEAE2A446DA5006BDC28 /* ClassMenuView.swift */; };
 		357159152A4492970017963C /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357159142A4492970017963C /* ParticipantsView.swift */; };
 		357159172A45B9A80017963C /* ParticipantButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357159162A45B9A80017963C /* ParticipantButton.swift */; };
+		357159192A4A516A0017963C /* CalendarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357159182A4A516A0017963C /* CalendarButton.swift */; };
+		3571591B2A4A517E0017963C /* MissionDetailsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571591A2A4A517E0017963C /* MissionDetailsButton.swift */; };
 		35ED6C332A38B386005E5BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35ED6C322A38B386005E5BDE /* Assets.xcassets */; };
 		35ED6C362A38B386005E5BDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35ED6C352A38B386005E5BDE /* Preview Assets.xcassets */; };
 		9543E4262A3B3FBF005D2345 /* GlobalForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9543E4252A3B3FBF005D2345 /* GlobalForms.swift */; };
@@ -87,6 +89,8 @@
 		3546DEAE2A446DA5006BDC28 /* ClassMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMenuView.swift; sourceTree = "<group>"; };
 		357159142A4492970017963C /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
 		357159162A45B9A80017963C /* ParticipantButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantButton.swift; sourceTree = "<group>"; };
+		357159182A4A516A0017963C /* CalendarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarButton.swift; sourceTree = "<group>"; };
+		3571591A2A4A517E0017963C /* MissionDetailsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailsButton.swift; sourceTree = "<group>"; };
 		35ED6C2C2A38B385005E5BDE /* RaidUppTvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaidUppTvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED6C2E2A38B385005E5BDE /* RaidUppTvOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidUppTvOSApp.swift; sourceTree = "<group>"; };
 		35ED6C322A38B386005E5BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -473,6 +477,8 @@
 				351D805A2A41CB9500D3CC53 /* MissionSection.swift */,
 				FE8A92532A43D7DB00EB8A6C /* GenericMenu.swift */,
 				357159162A45B9A80017963C /* ParticipantButton.swift */,
+				357159182A4A516A0017963C /* CalendarButton.swift */,
+				3571591A2A4A517E0017963C /* MissionDetailsButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 				FE8A923E2A40936F00EB8A6C /* BadgesView.swift in Sources */,
 				351D80542A41CB6F00D3CC53 /* GuildView.swift in Sources */,
 				351D80552A41CB6F00D3CC53 /* GuildMenuView.swift in Sources */,
+				3571591B2A4A517E0017963C /* MissionDetailsButton.swift in Sources */,
 				D6924B232A39F910007CB0B0 /* Persistence.swift in Sources */,
 				D6924B252A39F913007CB0B0 /* RaidUpp.xcdatamodeld in Sources */,
 				FE8A92412A41D57700EB8A6C /* MenuView.swift in Sources */,
@@ -714,6 +721,7 @@
 				FE8A92452A41D5C900EB8A6C /* MenuButton.swift in Sources */,
 				357159172A45B9A80017963C /* ParticipantButton.swift in Sources */,
 				351D80522A41CB6F00D3CC53 /* MissionDetailsView.swift in Sources */,
+				357159192A4A516A0017963C /* CalendarButton.swift in Sources */,
 				351D80532A41CB6F00D3CC53 /* MissionBoardView.swift in Sources */,
 				D6924B242A39F910007CB0B0 /* DatabaseInteractor.swift in Sources */,
 			);

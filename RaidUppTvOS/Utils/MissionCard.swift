@@ -44,8 +44,8 @@ struct MissionCard: View {
             Spacer()
         }
         .frame(width: 571, height: 178)
-        .background(Color(.white).opacity(0.5))
-        .cornerRadius(20)
+        .background(Color(.white).opacity(0.7))
+        .cornerRadius(15)
     }
 }
 

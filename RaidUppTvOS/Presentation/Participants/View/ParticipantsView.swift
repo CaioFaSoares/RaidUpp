@@ -10,9 +10,9 @@ import SwiftUI
 struct ParticipantsView: View {
     
     let participants: [[String]] = [
-        ["participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00", "participant-00"],
-        ["participant-01", "participant-01", "participant-01", "participant-01"],
-        ["participant-02", "participant-02", "participant-02", "participant-02", "participant-02"]
+        ["Robson", "Yara", "Ieda", "Moyses", "Ana"],
+        ["Caio", "Ayslana", "Helena", "Davi", "Nilia"],
+        ["Daniele", "Calisto", "PH", "Luizin"]
     ]
     
     @State private var selectedIndex: Int = 0
@@ -25,8 +25,11 @@ struct ParticipantsView: View {
                 Spacer()
                 Text("Participants")
                     .font(.title2)
+                    .foregroundColor(.black)
+                    .padding(.bottom, 40)
                 Text("Categories")
                     .font(.caption2)
+
                 Button(action: {
                     self.selectedIndex = 0
                 }) {
@@ -47,7 +50,7 @@ struct ParticipantsView: View {
                 .focused($selected, equals: 2)
                 Spacer()
             }
-            .foregroundColor(Color("gray"))
+            .foregroundColor(.black)
             .frame(alignment: .leading)
             .font(.body)
             .buttonStyle(.plain)
@@ -70,11 +73,12 @@ struct ParticipantsView: View {
                     ForEach(participants[selectedIndex].indices, id: \.self) { index in
                         ParticipantButton(
                             imageName: participants[selectedIndex][index],
-                            name: "daniele"
+                            name: participants[selectedIndex][index]
                         )
                     }
                 }
                 .focusSection()
+                .padding(.leading, 100)
             }
             .frame(width: 1170, height: 1000)
         }

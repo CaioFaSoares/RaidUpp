@@ -33,7 +33,7 @@ struct BoardHeader: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .foregroundColor(.black)
             Button {
-                print("calendario")
+                //print("calendario")
             } label: {
                 Text("Calendar")
                     .font(.body)
